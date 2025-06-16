@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ฝึกคำศัพท์ภาษาอังกฤษรายสัปดาห์</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 ฝึกคำศัพท์ภาษาอังกฤษ</h1>
+            <p>พัฒนาทักษะภาษาอังกฤษของคุณ</p>
+        </div>
+
+        <div class="week-selector">
+            <h2>เลือกสัปดาห์ที่ต้องการจะฝึก</h2>
+            <div class="week-grid" id="weekGrid">
+                <!-- Week buttons will be generated here -->
+            </div>
+        </div>
+
+        <div class="practice-area" id="practiceArea">
+            <div class="stats">
+                <div class="stat-item">
+                    <h3 id="currentWeek">สัปดาห์ที่ 1</h3>
+                    <p>สัปดาห์ปัจจุบัน</p>
+                </div>
+                <div class="stat-item">
+                    <h3 id="correctCount">0</h3>
+                    <p>ตอบถูก</p>
+                </div>
+                <div class="stat-item">
+                    <h3 id="totalCount">0</h3>
+                    <p>จำนวนข้อ</p>
+                </div>
+                <div class="stat-item">
+                    <h3 id="accuracy">0%</h3>
+                    <p>ความแม่นยำ</p>
+                </div>
+            </div>
+
+            <div class="question-area">
+                <div class="question-type" id="questionType">แปลเป็นภาษาอังกฤษ:</div>
+                <div class="question" id="questionText">เลือกสัปดาห์เพื่อเริ่มฝึก!</div>
+                <input type="text" class="answer-input" id="answerInput" placeholder="พิมพ์คำตอบของคุณที่นี่..." disabled>
+                <div class="button-group">
+                    <button class="submit-btn" id="submitBtn" onclick="checkAnswer()" disabled>ตรวจคำตอบ</button>
+                    <button class="submit-btn next-btn" id="nextBtn" onclick="nextQuestion()" disabled>ข้อถัดไป</button>
+                </div>
+                <div class="feedback" id="feedback"></div>
+            </div>
+
+            <div class="controls">
+                <button class="reset-btn" onclick="resetStats()">เริ่มใหม่</button>
+                <button class="reset-btn" onclick="goBack()">เลือกสัปดาห์อื่น</button>
+            </div>
+
+            <div class="help-text">
+                <p>เพิ่มเติม!</p>
+                <ul>
+                    <li>กด Enter เพื่อตรวจคำตอบ</li>
+                    <li>กด Enter อีกครั้งเพื่อไปข้อถัดไป</li>
+                    <li>ไม่ต้องพิมพ์คำตอบทั้งหมด</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
